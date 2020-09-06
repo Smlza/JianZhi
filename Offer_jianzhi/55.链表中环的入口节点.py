@@ -6,16 +6,27 @@
 """
 给一个链表，若其中包含环，请找出该链表的环的入口结点，否则，输出null。
 """
-def wa(func):
-    def f():
-        print("1")
-        func()
-        print("2")
-    return f
 
-@wa #f1=wa(f1)
-def f1():
-    print(3)
 
-f1()
+
+# class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+class Solution:
+    def EntryNodeOfLoop(self, pHead):
+        if pHead ==None or pHead.next==None:
+            return None
+        p=pHead
+        l=[]
+        while p:
+            if p in l:
+                return p
+            else:
+                l.append(p)
+                p=p.next
+        return None
+
+
+
 

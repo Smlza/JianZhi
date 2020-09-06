@@ -6,7 +6,7 @@
 class Solution:
     def Fibonacci(self, n):
         s=[0,1]
-        if n==0:
+        if n==0 :
             return s[0]
         elif n==1:
             return s[1]
